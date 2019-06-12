@@ -1,40 +1,86 @@
 ---
 title: Hosted Che
 keywords: 
-tags: []
+tags: [Hosted Che]
 sidebar: che_7_docs
 permalink: che-7/hosted-che.html
 folder: che-7/overview
 summary: 
 ---
 
-:parent-context-of-hosted-che: {context}
-
-[id='hosted-che_{context}']
+[id="hosted-che"]
 = Hosted Che
 
-:context: hosted-che
+"Hosted Che" is link:https://www.eclipse.org/che/[Eclipse Che] hosted by Red Hat. Che server is running on OpenShift Dedicated and user base is spread across multiple OpenShift Online clusters where workspaces are created.
+
+[id="terms-of-service"]
+== Terms of Service
+
+"Hosted Che" has the following usage limits and terms of service:
+
+- Storage: `1GB`
+- RAM: `3GB`
+- CPU: `6 Cores`
+- Concurrent workspaces: `1`
+- Number of workspaces: `Unlimited`
+- Number of projects per workspace: `Unlimited`
+- Usage time limit: `None`
+- Maximum Account Inactivity period: `30 days`
+
+NOTE: If a user does not login to "Hosted Che" for more than 30 days the account will be automatically deprovisioned and all existing workspaces will be lost. In order to start using "Hosted Che" again, a user will need to re-register.
 
 
-This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. Can include more than one paragraph. Consider using the information from the user story.
+- Workspace Idling time: `15 minutes`
 
-[id='prerequisites-{context}']
-== Prerequisites
+NOTE: Once started workspace can be used for an unlimited period of time. However, if there are no interactions with IDE workspace will be gracefully stopped.
 
-* A bulleted list of conditions that must be satisfied before the user starts following this assembly.
-* You can also link to other modules or assemblies the user must follow before starting this assembly.
-* Delete the section title and bullets if the assembly has no prerequisites.
+- Ephemeral by default
 
+NOTE: In the ephemeral mode workspace has no PVC attached, which means that all changes to the source code will be lost when the workspace is stopped unless they are pushed to a source code repository. This is done in order to improve the performance of a workspace startup and file system operations inside the IDE. User can disable ephemeral mode using the dedicated toggle during the workspace creation process from the "User Dashboard".
 
-Include modules here.
+image::hosted-che/ephemeral-toggle.png[]
 
+[id="registration"]
+== Register to Hosted Che
 
+- Navigate to https://che.openshift.io/.
+- Log in with your existing OpenShift Online, Red Hat Developer Program, or Red Hat Customer Portal account, or register for a Red Hat account if you don't have one already.
 
-[id='related-information-{context}']
-== Related information
+image::hosted-che/registration-1.png[]
 
-* A bulleted list of links to other material closely related to the contents of the concept module.
-* For more details on writing assemblies, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+- In the next screen, activate your account by clicking on the *ACTIVATE ACCOUNT* button.
 
-:context: {parent-context-of-hosted-che}
+image::hosted-che/registration-2.png[]
+
+- Once your environment is being built and then complete, you will receive an email with a link to connect to your Eclipse Che instance.
+
+- Follow the link and the email and start to use Hosted Che by clicking on the *Get Started* button which will redirect you to the User Dashboard.
+
+image::hosted-che/registration-3.png[]
+
+[id="getting-started"]
+== Getting started
+Follow the wizard to create a workspace from the "User Dashboard":
+
+image::hosted-che/getting-started-ud.png[]
+
+You can also create a workspace from a predefined link:https://www.eclipse.org/che/getting-started/cloud/[Getting started]  devfiles which provides a various set of the programming languages and frameworks:
+
+- Navigate to https://www.eclipse.org/che/getting-started/cloud/
+- Choose the desired flavor and launch your new Workspace.
+
+image::hosted-che/getting-started-devfile.png[]
+
+[id='github-account-linking']
+== Link your GitHub Account
+
+You can also link your account and import projects directly from GitHub during workspace creation from the "User Dashboard":
+
+image::hosted-che/gh-account-linking.png[]
+
+NOTE: In order to use push the source code to GitHub from IDE you will need to generate SSH keys using the link:https://github.com/eclipse/che-theia/tree/master/plugins/ssh-plugin[SSH Plug-in] and upload the public key to your GitHub account (`Settings` -> `SSH and GPG keys` -> `New SSH key`) 
+
+[id='faq']
+== Frequently Asked Questions (FAQs) and Troubleshooting
+
+Frequently Asked Questions (FAQs) and Troubleshooting can be found on the following link:https://github.com/redhat-developer/rh-che/blob/master/FAQ.adoc[link].
