@@ -8,115 +8,32 @@ folder: che-7/overview
 summary: 
 ---
 
-[id="hosted-che"]
+:parent-context-of-hosted-che: {context}
+
+[id="hosted-che_{context}"]
 = Hosted Che
 
-"Hosted Che" is link:https://www.eclipse.org/che/[Eclipse Che] hosted by Red Hat. Che server is running on OpenShift Dedicated and user base is spread across multiple OpenShift Online clusters where workspaces are created.
+include::ref_about_hosted_che.adoc[leveloffset=+1]
 
-[id="terms-of-service"]
-== Terms of Service
-
-"Hosted Che" has the following usage limits and terms of service:
-
-- Storage: `1GB`
-- RAM: `3GB`
-- CPU: `6 Cores`
-- Concurrent workspaces: `1`
-- Number of workspaces: `Unlimited`
-- Number of projects per workspace: `Unlimited`
-- Usage time limit: `Unlimited`
-- Maximum Account Inactivity period: `30 days`
-
-NOTE: If a user does not login to "Hosted Che" for more than 30 days the account will be automatically deprovisioned and all existing workspaces will be lost. In order to start using "Hosted Che" again, a user will need to re-register.
-
-- Workspace Idling time: `15 minutes`
-
-NOTE: Once started workspace can be used for an unlimited period of time. However, if there are no interactions with IDE workspace will be gracefully stopped after 15 minutes.
-
-- Ephemeral by default
-
-NOTE: In the ephemeral mode workspace has no PVC attached, which means that all changes to the source code will be lost when the workspace is stopped unless they are pushed to a source code repository. This is done in order to improve the performance of a workspace startup and file system operations inside the IDE. User can disable ephemeral mode using the dedicated toggle during the workspace creation process from the "User Dashboard".
-
-image::hosted-che/ephemeral-toggle.png[]
-
-[id="registration"]
-== Register to Hosted Che
-
-- Navigate to https://che.openshift.io/.
-- Log in with your existing OpenShift Online, Red Hat Developer Program, or Red Hat Customer Portal account, or register for a Red Hat account if you don't have one already.
-
-image::hosted-che/registration-1.png[]
-
-- In the next screen, activate your account by clicking on the *ACTIVATE ACCOUNT* button.
-
-image::hosted-che/registration-2.png[]
-
-- Once your environment is being built and then complete, you will receive an email with a link to connect to your Eclipse Che instance.
-
-- Follow the link and the email and start to use Hosted Che by clicking on the *Get Started* button which will redirect you to the User Dashboard.
-
-image::hosted-che/registration-3.png[]
+include::proc_registering_to_hosted_che.adoc[leveloffset=+1]
 
 [id="getting-started"]
 == Getting started
-Follow the wizard to create a workspace from the "User Dashboard":
+
+To create a workspace, two major options are available:
+
+. Creating a worskpace from the *User Dashboard*;
+. Creating a workspace from a template.
+
+=== Creating a worskpace from the *User Dashboard*
+
+- Follow the wizard to create a workspace from the "User Dashboard":
 
 image::hosted-che/getting-started-ud.png[]
 
-You can also create a workspace from a predefined link:https://www.eclipse.org/che/getting-started/cloud/[Getting started]  devfiles which provides a various set of the programming languages and frameworks:
 
-- Navigate to https://www.eclipse.org/che/getting-started/cloud/
-- Choose the desired flavor and launch your new Workspace.
+include::proc_creating_workspace_from_template_in_hosted_che.adoc[leveloffset=+2]
 
-image::hosted-che/getting-started-devfile.png[]
+include::proc_linking_github_account_in_hosted_che.adoc[leveloffset=+1]
 
-[id='github-account-linking']
-== Link your GitHub Account
-
-You can also link your account and import projects directly from GitHub during workspace creation from the "User Dashboard":
-
-image::hosted-che/gh-account-linking.png[]
-
-NOTE: In order to push the source code to GitHub from IDE you will need to generate SSH keys using the link:https://github.com/eclipse/che-theia/tree/master/plugins/ssh-plugin[SSH Plug-in] and upload the public key to your GitHub account (`Settings` -> `SSH and GPG keys` -> `New SSH key`). See link:end-user-tasks.html#configuring-your-vcs-credentials-for-your-workspaces_end-user-tasks[Configuring your VCS credentials for your workspaces] to learn more.
-
-[id='faq']
-== Frequently Asked Questions (FAQs) and Troubleshooting
-
-=== Is "Hosted Che" running on OpenShift?
-
-Yes, "Hosted Che" is the https://www.eclipse.org/che/[Eclipse Che] hosted by Red Hat. Che server is running on OpenShift Dedicated and user base is spread across multiple OpenShift Online clusters where workspaces are created.
-
-=== Where can I see the up-to-date status of the che.openshift.io?
-
-There is a dedicated status page - https://che.statuspage.io/
-
-=== How do I figure out where my workspace is running?
-
-In order to do this, one needs to execute the following `curl` request using `username` or `email` as a parameter:
-
-----
-curl -sgSL "https://api.openshift.io/api/users?filter[username]=<username>" | jq -r ".data[0].attributes.cluster"
-----
-
-Or
-
-----
-curl -sgSL "https://api.openshift.io/api/users?filter[email]=<email>" | jq -r ".data[0].attributes.cluster"
-----
-
-The result of the request will be the OpenShift Online cluster URL e.g. `https://api.starter-us-east-2.openshift.com/`
-
-Once user login to the underlying cluster he will get the `view` access in the `<username>-che` namespace where all workspace related pods are created.
-
-=== Can not login to che.openshift.io - `Authorization token is missed`
-
-To authenticate in https://che.openshift.io, you need to allow cookies from
-`static.developers.redhat.com`.
-
-In case these cookies are blocked (by a browser extension like https://www.eff.org/privacybadger[Privacy Badger]),
-authentication fails with following error:
-
-----
-Authorization token is missed
-Click here to reload page.
-----
+include::ref_hosted_che_faq.adoc[leveloffset=+1]

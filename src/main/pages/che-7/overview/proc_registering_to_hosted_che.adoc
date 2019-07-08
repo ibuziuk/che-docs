@@ -1,0 +1,22 @@
+[id="registering_to_hosted_che_{context}"]
+= Registering to Hosted Che
+
+.Prerequisites
+
+* Existing OpenShift Online, Red Hat Developer Program, or Red Hat Customer Portal account.
+
+.Procedure
+
+. Navigate to https://che.openshift.io/[Hosted Che].
+
+. Log in with the existing OpenShift Online, Red Hat Developer Program, or Red Hat Customer Portal account.
+
+. Click on the *ACTIVATE ACCOUNT* button to activate the accound.
+
+. Wait for an email with a link to connect to the Eclipse Che instance. It will be sent once the environment is ready for use.
+
+. Follow the *Get Started* link in the email and start to use Hosted Che.
+
+. The Hosted Che User Dashboard is diplayed.
+
+image::hosted-che/registration-3.png[]

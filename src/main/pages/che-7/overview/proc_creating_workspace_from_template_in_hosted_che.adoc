@@ -1,0 +1,13 @@
+[id="creating_workspace_from_template_{context}"]
+= Creating a workspace from a template in Hosted Che
+
+It is possible to create a workspace from a predefined link:https://www.eclipse.org/che/getting-started/cloud/[template].
+
+A various set of programming languages and frameworks are supported.
+
+.Procedure
+
+. Navigate to the https://www.eclipse.org/che/getting-started/cloud/[templates registry].
+. Choose the desired flavor and launch your new Workspace.
+
+image::hosted-che/getting-started-devfile.png[]
