@@ -24,15 +24,14 @@ summary:
 - Concurrent workspaces: `1`
 - Number of workspaces: `Unlimited`
 - Number of projects per workspace: `Unlimited`
-- Usage time limit: `None`
+- Usage time limit: `Unlimited`
 - Maximum Account Inactivity period: `30 days`
 
 NOTE: If a user does not login to "Hosted Che" for more than 30 days the account will be automatically deprovisioned and all existing workspaces will be lost. In order to start using "Hosted Che" again, a user will need to re-register.
 
-
 - Workspace Idling time: `15 minutes`
 
-NOTE: Once started workspace can be used for an unlimited period of time. However, if there are no interactions with IDE workspace will be gracefully stopped.
+NOTE: Once started workspace can be used for an unlimited period of time. However, if there are no interactions with IDE workspace will be gracefully stopped after 15 minutes.
 
 - Ephemeral by default
 
@@ -78,9 +77,46 @@ You can also link your account and import projects directly from GitHub during w
 
 image::hosted-che/gh-account-linking.png[]
 
-NOTE: In order to use push the source code to GitHub from IDE you will need to generate SSH keys using the link:https://github.com/eclipse/che-theia/tree/master/plugins/ssh-plugin[SSH Plug-in] and upload the public key to your GitHub account (`Settings` -> `SSH and GPG keys` -> `New SSH key`) 
+NOTE: In order to push the source code to GitHub from IDE you will need to generate SSH keys using the link:https://github.com/eclipse/che-theia/tree/master/plugins/ssh-plugin[SSH Plug-in] and upload the public key to your GitHub account (`Settings` -> `SSH and GPG keys` -> `New SSH key`). See link:end-user-tasks.html#configuring-your-vcs-credentials-for-your-workspaces_end-user-tasks[Configuring your VCS credentials for your workspaces] to learn more.
 
 [id='faq']
 == Frequently Asked Questions (FAQs) and Troubleshooting
 
-Frequently Asked Questions (FAQs) and Troubleshooting can be found on the following link:https://github.com/redhat-developer/rh-che/blob/master/FAQ.adoc[link].
+=== Is "Hosted Che" running on OpenShift?
+
+Yes, "Hosted Che" is the https://www.eclipse.org/che/[Eclipse Che] hosted by Red Hat. Che server is running on OpenShift Dedicated and user base is spread across multiple OpenShift Online clusters where workspaces are created.
+
+=== Where can I see the up-to-date status of the che.openshift.io?
+
+There is a dedicated status page - https://che.statuspage.io/
+
+=== How do I figure out where my workspace is running?
+
+In order to do this, one needs to execute the following `curl` request using `username` or `email` as a parameter:
+
+----
+curl -sgSL "https://api.openshift.io/api/users?filter[username]=<username>" | jq -r ".data[0].attributes.cluster"
+----
+
+Or
+
+----
+curl -sgSL "https://api.openshift.io/api/users?filter[email]=<email>" | jq -r ".data[0].attributes.cluster"
+----
+
+The result of the request will be the OpenShift Online cluster URL e.g. `https://api.starter-us-east-2.openshift.com/`
+
+Once user login to the underlying cluster he will get the `view` access in the `<username>-che` namespace where all workspace related pods are created.
+
+=== Can not login to che.openshift.io - `Authorization token is missed`
+
+To authenticate in https://che.openshift.io, you need to allow cookies from
+`static.developers.redhat.com`.
+
+In case these cookies are blocked (by a browser extension like https://www.eff.org/privacybadger[Privacy Badger]),
+authentication fails with following error:
+
+----
+Authorization token is missed
+Click here to reload page.
+----
