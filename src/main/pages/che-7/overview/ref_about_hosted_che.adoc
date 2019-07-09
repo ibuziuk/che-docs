@@ -1,31 +1,50 @@
 [id="about_hosted_che_{context}"]
 = About Hosted Che
 
-"Hosted Che" is link:https://www.eclipse.org/che/[Eclipse Che] hosted by Red Hat.
-Che server is running on OpenShift Dedicated and user base is spread across multiple OpenShift Online clusters where workspaces are created.
+Hosted{nbsp}Che is link:https://www.eclipse.org/che/[Eclipse{nbsp}Che] hosted by Red{nbsp}Hat.
+Che server is running on OpenShift{nbsp}Dedicated and user base is spread across multiple OpenShift{nbsp}Online{nbsp}clusters where workspaces are created.
 
-[id="terms-of-service"]
+[id="terms-of-service_{context}"]
 == Terms of Service
 
-"Hosted Che" has the following usage limits and terms of service:
+Hosted{nbsp}Che has the following usage limits and terms of service:
 
-- Storage: `1GB`
-- RAM: `3GB`
-- CPU: `6 Cores`
-- Concurrent workspaces: `1`
-- Number of workspaces: `Unlimited`
-- Number of projects per workspace: `Unlimited`
-- Usage time limit: `Unlimited`
-- Maximum Account Inactivity period: `30 days`
+Storage:: `1GB`
 
-NOTE: If a user does not login to "Hosted Che" for more than 30 days the account will be automatically deprovisioned and all existing workspaces will be lost. In order to start using "Hosted Che" again, a user will need to re-register.
+RAM:: `3GB`
 
-- Workspace Idling time: `15 minutes`
+CPU:: `6 Cores`
 
-NOTE: Once started workspace can be used for an unlimited period of time. However, if there are no interactions with IDE workspace will be gracefully stopped after 15 minutes.
+Concurrent workspaces:: `1`
 
-- Ephemeral by default
+Number of workspaces:: `Unlimited`
 
-NOTE: In the ephemeral mode workspace has no PVC (persistent volume claim) attached, which means that all changes to the source code will be lost when the workspace is stopped unless they are pushed to a source code repository. This is done in order to improve the performance of a workspace startup and file system operations inside the IDE. User can disable ephemeral mode using the dedicated toggle during the workspace creation process from the "User Dashboard".
+Number of projects per workspace:: `Unlimited`
 
-image::hosted-che/ephemeral-toggle.png[]
+Usage time limit:: `Unlimited`
+
+Maximum Account Inactivity period:: `30 days`
+
+[NOTE]
+====
+If a user does not login to Hosted{nbsp}Che for more than 30 days the account will be automatically deprovisioned and all existing workspaces will be lost.
+In order to start using Hosted{nbsp}Che again, a user will need to re-register.
+====
+
+Workspace Idling time:: `15 minutes`
+
+[NOTE] 
+====
+Once started workspace can be used for an unlimited period of time.
+However, if there are no interactions with IDE workspace will be gracefully stopped after 15 minutes.
+====
+
+Ephemeral mode:: defaults to `Active`
+
+[NOTE]
+====
+In the ephemeral mode workspace has no persistent storage attached. 
+All changes to the source code will be lost when the workspace is stopped unless they are pushed to a source code repository.
+This is done in order to improve the performance of a workspace startup and file system operations inside the IDE.
+User can disable ephemeral mode using the dedicated toggle during the workspace creation process from the user dashboard.
+====

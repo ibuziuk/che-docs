@@ -22,12 +22,12 @@ include::proc_registering_to_hosted_che.adoc[leveloffset=+1]
 
 To create a workspace, two major options are available:
 
-. Creating a worskpace from the *User Dashboard*;
+. Creating a worskpace from the user dashboard;
 . Creating a workspace from a template.
 
-=== Creating a worskpace from the *User Dashboard*
+=== Creating a worskpace from the user dashboard
 
-- Follow the wizard to create a workspace from the "User Dashboard":
+- Follow the wizard to create a workspace from the user dashboard:
 
 image::hosted-che/getting-started-ud.png[]
 

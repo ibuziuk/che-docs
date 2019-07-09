@@ -1,8 +1,22 @@
-[id="github-account-linking_{context}"]
+[id="linking-github-account_{context}"]
 = Linking a GitHub Account in Hosted Che
 
-To import projects from GitHub during workspace creation, link the user's GitHub account on the *User Dashboard*.
+[id="importing-from-github_{context}"]
+== Importing projects from GitHub
+
+To import projects from GitHub during workspace creation, link the user's GitHub account on the user dashboard.
 
 image::hosted-che/gh-account-linking.png[]
 
-NOTE: In order to push the source code to GitHub from IDE you will need to generate SSH keys using the link:https://github.com/eclipse/che-theia/tree/master/plugins/ssh-plugin[SSH Plug-in] and upload the public key to your GitHub account (`Settings` -> `SSH and GPG keys` -> `New SSH key`). See link:end-user-tasks.html#configuring-your-vcs-credentials-for-your-workspaces_end-user-tasks[Configuring your VCS credentials for your workspaces] to learn more.
+[id="contributing-to-github_{context}"]
+== Contributing to projects in GitHub
+
+To push the source code to GitHub from IDE these steps are required:
+
+. Generate a SSH keypair with the link:https://github.com/eclipse/che-theia/tree/master/plugins/ssh-plugin[SSH Plug-in].
+. Upload the public key to the GitHub account: menu:Settings[SSH and GPG keys>New SSH key]
+
+[NOTE]
+====
+See link:end-user-tasks.html#configuring-your-vcs-credentials-for-your-workspaces_end-user-tasks[Configuring your VCS credentials for your workspaces] to learn more.
+====
