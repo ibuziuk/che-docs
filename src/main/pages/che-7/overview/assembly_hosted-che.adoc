@@ -20,7 +20,7 @@ include::proc_registering_to_hosted_che.adoc[leveloffset=+1]
 [id="getting-started"]
 == Getting started
 
-To create a workspace, two major options are available:
+To create a workspace, two main options are available:
 
 . Creating a worskpace from the user dashboard;
 . Creating a workspace from a template.
