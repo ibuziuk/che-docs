@@ -11,7 +11,7 @@ image::hosted-che/gh-account-linking.png[]
 [id="contributing-to-github_{context}"]
 == Contributing to projects in GitHub
 
-To push the source code to GitHub from IDE these steps are required:
+To push the source code to GitHub from the IDE:
 
 . Generate a SSH keypair with the link:https://github.com/eclipse/che-theia/tree/master/plugins/ssh-plugin[SSH Plug-in].
 . Upload the public key to the GitHub account: menu:Settings[SSH and GPG keys>New SSH key]
