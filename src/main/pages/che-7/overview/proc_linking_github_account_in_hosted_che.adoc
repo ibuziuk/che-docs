@@ -1,4 +1,4 @@
-[id="linking-github-account_{context}"]
+[id="linking-a-github-account-in-hosted-che_{context}"]
 = Linking a GitHub Account in Hosted Che
 
 [id="importing-from-github_{context}"]
