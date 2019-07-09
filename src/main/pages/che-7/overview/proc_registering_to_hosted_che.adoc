@@ -11,7 +11,7 @@
 
 . Log in with the existing OpenShift{nbsp}Online, Red{nbsp}Hat{nbsp}Developer{nbsp}Program, or Red{nbsp}Hat{nbsp}Customer{nbsp}Portal account.
 
-. Click btn:[Activate account] to activate the account.
+. Click the btn:[Activate account] button.
 
 . Wait for an email with a link to connect to the Eclipse{nbsp}Che instance. It will be sent once the environment is ready for use.
 
