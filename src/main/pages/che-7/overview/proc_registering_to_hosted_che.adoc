@@ -3,7 +3,7 @@
 
 .Prerequisites
 
-* Existing OpenShift{nbsp}Online, Red{nbsp}Hat{nbsp}Developer{nbsp}Program, or Red{nbsp}Hat{nbsp}Customer{nbsp}Portal account.
+* Existing OpenShift{nbsp}Online, Red{nbsp}Hat Developer{nbsp}Program, or Red{nbsp}Hat Customer{nbsp}Portal account.
 
 .Procedure
 
