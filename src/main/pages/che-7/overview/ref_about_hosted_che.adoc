@@ -45,6 +45,6 @@ Ephemeral mode:: defaults to `Active`
 ====
 In the ephemeral mode workspace has no persistent storage attached. 
 All content changes are lost when the workspace is stopped unless they are pushed to a source-code repository first.
-This is done in order to improve the performance of a workspace startup and file system operations inside the IDE.
+This is done to improve the performance of workspace starts and file-system operations in the IDE.
 User can disable ephemeral mode using the dedicated toggle during the workspace creation process from the user dashboard.
 ====
