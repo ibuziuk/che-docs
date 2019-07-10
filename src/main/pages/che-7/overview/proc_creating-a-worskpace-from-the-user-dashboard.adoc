@@ -36,7 +36,7 @@ This paragraph is the procedure module introduction: a short description of the 
 
 . Navigate to the link:https://che.openshift.io/dashboard/[Hosted{nbsp}Che user dashboard].
 
-. Click on btn:[Create Worspace].
+. Click the btn:[Create Workspace] button.
 
 . Define a *Name* for the Workspace. A generated name is proposed. It can be modified.
 
