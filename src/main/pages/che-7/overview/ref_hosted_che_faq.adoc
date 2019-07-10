@@ -1,4 +1,0 @@
-[id="hosted_che_faq_{context}"]
-= Frequently asked questions and troubleshooting
-
-Frequently Asked Questions (FAQs) and Troubleshooting can be found on the following link:https://github.com/redhat-developer/rh-che/blob/master/FAQ.adoc[link].

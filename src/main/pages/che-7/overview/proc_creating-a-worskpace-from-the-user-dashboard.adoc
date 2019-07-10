@@ -1,0 +1,54 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+// This module can be included from assemblies using the following include statement:
+// include::<path>/proc_creating-a-worskpace-from-the-user-dashboard.adoc[leveloffset=+1]
+
+// The file name and the ID are based on the module title. For example:
+// * file name: proc_doing-procedure-a.adoc
+// * ID: [id='proc_doing-procedure-a_{context}']
+// * Title: = Doing procedure A
+//
+// The ID is used as an anchor for linking to the module. Avoid changing
+// it after the module has been published to ensure existing links are not
+// broken.
+//
+// The `context` attribute enables module reuse. Every module's ID includes
+// {context}, which ensures that the module has a unique ID even if it is
+// reused multiple times in a guide.
+//
+// Start the title with a verb, such as Creating or Create. See also
+// _Wording of headings_ in _The IBM Style Guide_.
+[id="creating-a-worskpace-from-the-user-dashboard_{context}"]
+= Creating a worskpace from the user dashboard
+
+This paragraph is the procedure module introduction: a short description of the procedure.
+
+[discrete]
+== Prerequisites
+
+* Existing Hosted{nbsp}Che account.
+
+[discrete]
+== Procedure
+
+
+. Navigate to the link:https://che.openshift.io/dashboard/[Hosted{nbsp}Che user dashboard].
+
+. Click on btn:[Create Worspace].
+
+. Define a *Name* for the Workspace. A generated name is proposed. It can be modified.
+
+. In the *Stack* section, select the workspace runtime environment that will be used to build and run your projects from the list.
+
+. In the *RAM* section, adapt the memory available for the workspace runtime environment, within the limits defined in the link:hosted-che.html#terms-of-service_{context}[terms of service].
+
+. In the *Ephemeral mode* section, choose to have persistent storage attached or not.
+
+. In the *Projects* section, choose the projects to integrate in the workspace. For the specifi GitHub case see link:hosted-che.html#importing-projects-from-github-in-hosted-che_{context}[Importing projects from GitHub in Hosted Che].
+
+[discrete]
+== Additional resources
+
+* For more details, see link:using-developer-environments-workspaces.html[Using developer environments - workspaces].

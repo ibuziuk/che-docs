@@ -13,27 +13,33 @@ summary:
 [id="hosted-che_{context}"]
 = Hosted Che
 
-include::ref_about_hosted_che.adoc[leveloffset=+1]
+This guide describes some procedures to get started with Hosted{nbsp}Che that are not covered by link:using-developer-environments-workspaces.html[Using developer environments - workspaces].
 
-include::proc_registering_to_hosted_che.adoc[leveloffset=+1]
+It starts with a general overview of Eclipse{nbsp}Che terms of service.
 
-[id="getting-started"]
-== Getting started
+Then the two main options to create a workspace are covered:
 
-To create a workspace, two main options are available:
+. Creating a worskpace from the user dashboard.
 
-. Creating a worskpace from the user dashboard;
 . Creating a workspace from a template.
 
-=== Creating a worskpace from the user dashboard
+Some outline is then given on how to start working with GitHub projects.
 
-- Follow the wizard to create a workspace from the user dashboard:
+include::ref_about-hosted-che.adoc[leveloffset=+1]
 
-image::hosted-che/getting-started-ud.png[]
+include::proc_registering-to-hosted-che.adoc[leveloffset=+1]
 
+include::proc_creating-a-worskpace-from-the-user-dashboard.adoc[leveloffset=+1]
 
-include::proc_creating_workspace_from_template_in_hosted_che.adoc[leveloffset=+2]
+include::proc_creating-a-workspace-from-template-in-hosted-che.adoc[leveloffset=+1]
 
-include::proc_linking_github_account_in_hosted_che.adoc[leveloffset=+1]
+include::proc_importing-projects-from-github-in-hosted-che.adoc[leveloffset=+1]
 
-include::ref_hosted_che_faq.adoc[leveloffset=+1]
+include::proc_contributing-to-github-projects-in-hosted-che.adoc[leveloffset=+1]
+
+[discrete]
+== Additional resources
+
+* Frequently Asked Questions (FAQs) and Troubleshooting can be found on the following link:https://github.com/redhat-developer/rh-che/blob/master/FAQ.adoc[link].
+
+* For general end-user guidance see link:using-developer-environments-workspaces.html[Using developer environments - workspaces].
