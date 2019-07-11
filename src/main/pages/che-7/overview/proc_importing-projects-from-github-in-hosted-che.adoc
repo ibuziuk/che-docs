@@ -10,15 +10,21 @@
 
 This section describes how to import a GitHub project in Hosted Che.
 
+This action can be done during the creation of a new workspace, or later, on an existing workspace.
+
 [discrete]
 == Prerequisites
 
-* Navigate to the *Projects* section of the *New Workspace* creation screen. 
+* Existing Hosted{nbsp}Che account. See link:hosted_che.html#registering_to_hosted_che_{context}[Registering to Hosted{nbsp}Che].
 
-* Alternatively navigate to the *Projects* section of the *Configure Workspace* screen
+* Existing GitHub account.
 
 [discrete]
 == Procedure
+
+. Navigate to the *Projects* section of the *New Workspace* creation screen.  
++
+Alternatively if the workspace is already existing, navigate to the *Projects* section of the *Configure Workspace* screen.
 
 . Click the btn:[Add Project] button.
 

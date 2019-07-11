@@ -13,7 +13,7 @@ This section describes how to create a workspace from the user dashboard in Host
 [discrete]
 == Prerequisites
 
-* Existing Hosted{nbsp}Che account.
+* Existing Hosted{nbsp}Che account. See link:hosted_che.html#registering_to_hosted_che_{context}[Registering to Hosted{nbsp}Che].
 
 [discrete]
 == Procedure
