@@ -10,7 +10,7 @@
 
 This section describes how to create a workspace from a predefined link:https://www.eclipse.org/che/getting-started/cloud/[template].
 
-A various set of programming languages and frameworks are supported.
+Various programming languages and frameworks are supported.
 
 [discrete]
 == Prerequisites
