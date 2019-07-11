@@ -15,7 +15,7 @@ This action can be done during the creation of a new workspace, or later, on an 
 [discrete]
 == Prerequisites
 
-* Existing Hosted{nbsp}Che account. See link:hosted_che.html#registering_to_hosted_che_{context}[Registering to Hosted{nbsp}Che].
+* Existing Hosted{nbsp}Che account. See link:hosted-che.html#registering-to-hosted-che_{context}[Registering to Hosted{nbsp}Che].
 
 * Existing GitHub account.
 
