@@ -30,7 +30,7 @@ This section describes how to create a workspace from the user dashboard in Host
 
 . In the *Ephemeral mode* section, choose to have persistent storage attached or not.
 
-. In the *Projects* section, choose the projects to integrate in the workspace. For the specifi GitHub case see link:hosted-che.html#importing-projects-from-github-in-hosted-che_{context}[Importing projects from GitHub in Hosted Che].
+. In the *Projects* section, choose the projects to integrate in the workspace. For the specific GitHub case, see link:#importing-projects-from-github-in-hosted-che_{context}[Importing projects from GitHub in Hosted Che].
 
 [discrete]
 == Additional resources
