@@ -20,7 +20,7 @@ Hosted{nbsp}Che has the following usage limits and terms of service:
 * RAM: 3 GB
 * CPU: 6 Cores
 * Concurrent workspaces: 1
-* Number of workspaces: Unlimited
+* Number of workspaces: unlimited
 * Number of projects per workspace: Unlimited
 * Usage time limit: none
 * Maximum account inactivity period: 30 days
