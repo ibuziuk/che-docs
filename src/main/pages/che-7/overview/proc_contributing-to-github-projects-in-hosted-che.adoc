@@ -27,4 +27,4 @@ This section describes how to contribute to GitHub projects in Hosted Che.
 [discrete]
 == Additional resources
 
-* To learn more see link:end-user-tasks.html#configuring-your-vcs-credentials-for-your-workspaces_end-user-tasks[Configuring your VCS credentials for your workspaces].
+* To learn more, see link:end-user-tasks.html#configuring-your-vcs-credentials-for-your-workspaces_end-user-tasks[Configuring your VCS credentials for your workspaces].
