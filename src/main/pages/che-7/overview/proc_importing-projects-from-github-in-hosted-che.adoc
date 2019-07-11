@@ -26,7 +26,7 @@ This section describes how to import a GitHub project in Hosted Che.
 
 . Click the btn:[Connect your GitHub account] button.
 
-. In the popup, review the settings and click on the btn:[Authorize openshiftio] button.
+. In the popup, review the settings and click the btn:[Authorize openshiftio] button.
 
 . Type in the password as requested and click on the btn:[Confirm password] button.
 
