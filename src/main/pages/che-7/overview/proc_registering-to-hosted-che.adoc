@@ -3,7 +3,9 @@
 // assembly_hosted-che.adoc
 
 [id="registering_to_hosted_che_{context}"]
-= Registering to Hosted Che
+= Registering to Hosted{nbsp}Che
+
+This section describes how to register to Hosted{nbsp}Che
 
 [discrete]
 == Prerequisites
