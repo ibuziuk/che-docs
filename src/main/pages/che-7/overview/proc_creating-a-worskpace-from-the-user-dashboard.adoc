@@ -24,7 +24,7 @@ This section describes how to create a workspace from the user dashboard in Host
 
 . Define a *Name* for the workspace. A generated name is proposed. It can be modified.
 
-. In the *Stack* section, select the workspace runtime environment that will be used to build and run your projects from the list.
+. In the *Stack* section, select the workspace runtime environment that will be used to build and run projects from the list.
 
 . In the *RAM* section, adapt the memory available for the workspace runtime environment, within the limits defined in the link:hosted-che.html#terms-of-service_{context}[terms of service].
 
