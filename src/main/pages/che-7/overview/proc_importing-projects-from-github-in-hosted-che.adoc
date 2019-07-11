@@ -20,7 +20,7 @@ This section describes how to import a GitHub project in Hosted Che.
 [discrete]
 == Procedure
 
-. Click on the btn:[Add Project] button.
+. Click the btn:[Add Project] button.
 
 . Navigate to the *GitHub* tab.
 
