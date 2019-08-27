@@ -9,8 +9,9 @@ This section describes how to convert a Che 6 workspace to a Che 7 devfile with 
 
 To convert a Che 6 workspace to a workspace:
 
-. Open an old Che 6 configuration file.
+. Open an old Che 6 configuration file to see your current setting. If you don't know how to do that, please see a guide: <<accessing-che-6-workspace-configuration_{context}>>
 . Create a new workspace from the similar Che 7 devfile
+.. Select the most similar Che 7 stack
 +
 .Che 7 devfile corresponding to the respective Che 6 stacks.
 [options="header",cols="2"]
@@ -20,16 +21,16 @@ To convert a Che 6 workspace to a workspace:
 
 | Apache Camel based projects, +
 Apache Camel based projects on Che 7
-| Apache Camel based projects on Che 7
+| Apache Camel based on Spring Boot
 
 | .NET, +
 .NET Core with Theia IDE
-| .NET Core with Theia IDE
+| .NET Core
 
 | Go, +
 CentOS Go, +
 Go with Theia IDE
-| Go with Theia IDE
+| Go
 
 | Java Gradle
 | Java Gradle
@@ -37,7 +38,8 @@ Go with Theia IDE
 | Blank, +
 Java, +
 Java-MySQL, +
-Eclipse Che
+Eclipse Che, +
+Java CentOS
 | Java Maven
 
 | Node, +
@@ -46,10 +48,30 @@ CentOS nodejs
 
 | Python, +
 Python with Theia IDE
-| Python with Theia IDE
+| Python
+
+| Eclipse Vert.x
+| Java Vert.x
+
+| PHP
+| PHP Simple
+
+| Spring Boot
+| Java Spring Boot
 |===
 
-. Add the required number of blank projects.
-. Change the required *devfile* fields.
+.. By default the example project is added to your workspace. You can remove it by cliclik a *Remove* button.
 +
-image::workspaces/devfile-fields.png[link="{imagesdir}/workspaces/devfile-fields.png"]
+image::workspaces/remove-default-project.png[link="{imagesdir}/workspaces/remove-default-project.png"]
+
+.. You can import your own project. Click *Add or Import Project*, select Git or Github option and import your project.
++
+image::workspaces/add-custom-project.png[link="{imagesdir}/workspaces/add-custom-project.png"]
+
+.. If you want to set other components, select *Create & Proceed Editing*. 
++
+image::workspaces/create-and-edit.png[link="{imagesdir}/workspaces/create-and-edit.png"]
++
+Select a Devfile tab and update current setting. See the link:https://redhat-developer.github.io/devfile/devfile[Devfile specifications] for detailed information on how to add or remove components, or how to set memory and environment variables.
++
+image::workspaces/update-devfile-configuration.png[link="{imagesdir}/workspaces/update-devfile-configuration.png"]
