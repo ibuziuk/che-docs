@@ -3,15 +3,14 @@
 [id="converting-a-che-6-workspace-to-a-basic-che-7-devfile_{context}"]
 = Converting a Che 6 workspace to a basic Che 7 devfile
 
-This section describes how to convert a Che 6 workspace to a Che 7 devfile with minimal features. The result is a basic Che 7 devfile that can be used to start working.
+This section describes how to convert a Che 6 workspace to a Che 7 devfile. The result is a basic Che 7 devfile that can be used for further workspace creation.
 
 .Procedure
 
-To convert a Che 6 workspace to a workspace:
+To convert a Che 6 workspace to a Che 7 devfile:
 
-. Open an old Che 6 configuration file to see your current setting. If you don't know how to do that, please see a guide: <<accessing-che-6-workspace-configuration_{context}>>
-. Create a new workspace from the similar Che 7 devfile
-.. Select the most similar Che 7 stack
+. Open an old Che 6 configuration file in order to identify which Che 6 stack is used in the workspace. Below there is a detailed guide for  <<accessing-che-6-workspace-configuration_{context}>>.
+. Create a new workspace from the Che 7 devfile that corresponds to the Che 6 stack.
 +
 .Che 7 devfile corresponding to the respective Che 6 stacks.
 [options="header",cols="2"]
@@ -60,20 +59,21 @@ Python with Theia IDE
 | Java Spring Boot
 |===
 
-.. By default the example project is added to your workspace. You can remove it by cliclik a *Remove* button.
+.. By default, the example project is added to the workspace. The default project can be removed by clicking the *Remove* button:
 +
 image::workspaces/remove-default-project.png[link="{imagesdir}/workspaces/remove-default-project.png"]
 
-.. You can import your own project. Click *Add or Import Project*, select Git or Github option and import your project.
+.. One can import a custom project that was used in Che 6 workspace by clicking the *Add or Import Project* and select *Git* or *Github* options:
 +
 image::workspaces/add-custom-project.png[link="{imagesdir}/workspaces/add-custom-project.png"]
 
-.. When you import your own project, you should add commands to run it. Default commands are set only if default example project is imported. You can add those commands in Devfile configuration (see the steps below) or in UI of a running worksapce.
+.. Once the project is imported, various commands could be added to the devfile e.g `run`, `build`, `test`. Those commands will be later accessible from the IDE once the workspace is started. Custom commands and other devfile components can be added in the *Devfile* configuration:
 
-.. If you want to set commands or other components, select *Create & Proceed Editing*. 
+.. Select the *Create & Proceed Editing* button. 
 +
 image::workspaces/create-and-edit.png[link="{imagesdir}/workspaces/create-and-edit.png"]
 +
-Select a Devfile tab and update current setting. See the link:https://redhat-developer.github.io/devfile/devfile[Devfile specifications] for detailed information on how to add or remove components, or how to set memory and environment variables.
+Select the *Devfile* tab in order to update the configuration. See the link:https://redhat-developer.github.io/devfile/devfile[Devfile specification] for the detailed information about the supported properties and attributes.
 +
 image::workspaces/update-devfile-configuration.png[link="{imagesdir}/workspaces/update-devfile-configuration.png"]
+.. Once the *Devfile* configuration setup is finished, press the *Open* button in order to start a newly created Che 7 workspace.

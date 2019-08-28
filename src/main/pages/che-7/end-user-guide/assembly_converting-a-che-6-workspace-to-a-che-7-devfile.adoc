@@ -1,6 +1,6 @@
 ---
 title: Converting a Che 6 workspace to a Che 7 devfile
-keywords: 
+keywords:
 tags: []
 sidebar: che_7_docs
 permalink: che-7/converting-a-che-6-workspace-to-a-che-7-devfile/
@@ -19,10 +19,11 @@ summary:
 
 This section describes how to manually convert an old Che 6 workspace configuration to a Che 7 devfile. The following are the benefits of using a Che 7 devfile:
 
-* Using an original Che 7 devfile instead of a Che 6 factory
+* Using a portable file that will work with any installation of Che; nothing needs to be changed on the server to get a workspace up and running.
+* Configuration can be stored in the project's repository itself and automatically be picked up by Che to start a workspace. In order to start a workspace, one could simply refer to a devfile using the following format `<che-instance-domain>/f?url=path` e.g. https://che.openshift.io/f?url=https://raw.githubusercontent.com/redhat-developer/devfile/master/getting-started/vertx/devfile.yaml which will create and start a new workspace based on the link:https://github.com/redhat-developer/devfile/blob/master/getting-started/vertx/devfile.yaml[devfile] defined in the URL attribute.
 * A human-readable YAML format for all content
 
-For an example, below you can see comparison of a *Che 6 workspace configuration* and a *Che 7 devfile*. Both are *Java Vert.x* stacks with default project and default settings:
+Below there is a comparison of a *Che 6 workspace configuration* and a *Che 7 devfile*. Both are *Java Vert.x* stacks with default project and default settings:
 
 +++ <details><summary> +++
 Che 6 configuration file
