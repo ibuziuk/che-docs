@@ -84,9 +84,6 @@ Che 6 configuration file
     }
   ],
   "name": "wksp-jhwp",
-  "attributes": {
-    "persistVolumes": "false"
-  },
   "commands": [
     {
       "commandLine": "scl enable rh-maven33 'mvn compile vertx:debug -f ${current.project.path} -Dvertx.disableDnsResolver=true'",
@@ -150,8 +147,6 @@ projects:
     source:
       location: 'https://github.com/che-samples/web-java-vertx'
       type: git
-attributes:
-  persistVolumes: 'false'
 components:
   - id: redhat/java/latest
     type: chePlugin

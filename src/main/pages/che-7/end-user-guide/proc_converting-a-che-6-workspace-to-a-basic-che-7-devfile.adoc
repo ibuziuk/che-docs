@@ -68,7 +68,9 @@ image::workspaces/remove-default-project.png[link="{imagesdir}/workspaces/remove
 +
 image::workspaces/add-custom-project.png[link="{imagesdir}/workspaces/add-custom-project.png"]
 
-.. If you want to set other components, select *Create & Proceed Editing*. 
+.. When you import your own project, you should add commands to run it. Default commands are set only if default example project is imported. You can add those commands in Devfile configuration (see the steps below) or in UI of a running worksapce.
+
+.. If you want to set commands or other components, select *Create & Proceed Editing*. 
 +
 image::workspaces/create-and-edit.png[link="{imagesdir}/workspaces/create-and-edit.png"]
 +
