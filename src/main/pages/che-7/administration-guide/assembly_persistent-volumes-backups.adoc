@@ -13,11 +13,11 @@ summary:
 [id='persistent-volumes-backups']
 = Persistent Volumes backups
 
-link:https://kubernetes.io/docs/concepts/storage/persistent-volumes/[Persistent Volumes] are used for storing the {prod-id-short} workspace data like source code, scripts, documentation. 
-In order to prevent the data loss Persistent Volumes should be backed up periodically. It is not recommended to use backup solutions which are dependednt on the underlying storage system i.e. link:https://www.gluster.org/[Gluster] / link:https://ceph.io[https://ceph.io] specific.
-The recomendation is to use the storage agonstic tools for back up and restoring the Kubernetes cluster resources and persistent volumes.
-Currently, the recomended way for backing up Kubernetes applications and their persistent volumes is link:https://github.com/vmware-tanzu/velero[velero] which can:
+link:https://kubernetes.io/docs/concepts/storage/persistent-volumes/[Persistent Volumes] are used for storing the {prod-short} workspace data like the source code of the repository. 
+In order to prevent data loss, Persistent Volumes should be backed up periodically. Even though it is possible to use backup solutions that are dependent on the underlying storage system (e.g. link:https://www.gluster.org/[Gluster] / link:https://ceph.io[Ceph] specific),
+the recommendation is to use the storage agnostic tools for back up and restoring the Kubernetes cluster resources including persistent volumes.
+For backing up Kubernetes applications and their persistent volumes the recommendation is to use open-source tool link:https://github.com/vmware-tanzu/velero[Velero], which can be run with a cloud provider or on-premises and let: 
 
-- Take backups of the cluster and restore in case of loss.
-- Migrate cluster resources to other clusters.
-- Replicate the production cluster to development and testing clusters.
+- take backups of the cluster and restore in case of loss.
+- migrate cluster resources to other clusters.
+- replicate the production cluster to development and testing clusters.

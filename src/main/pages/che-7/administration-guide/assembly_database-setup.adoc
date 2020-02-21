@@ -1,7 +1,7 @@
 ---
 title: Database Setup
 keywords:
-tags: []
+tags: [database]
 sidebar: che_7_docs
 permalink: che-7/database-setup
 folder: che-7/administration-guide
@@ -13,14 +13,14 @@ summary:
 [id='database-setup']
 = Database Setup
 
-link:https://www.postgresql.org/[PostgreSQL] database is used for persisting data about the state of {prod-id-short} and contains vital information about the user accounts, workspaces, preferences, ssh keys etc.
-By default, {prod-id-short} operator will create and manage a Postgres deployment. 
-However, {prod-id-short} operator does not support full lifecycle capabilities like backups and recovery and for business-critical setup, it is recommended to configure an external database with the following disaster recovery options:
+link:https://www.postgresql.org/[PostgreSQL] database is used for persisting data about the state of {prod-short} and contains vital information about the user accounts, workspaces, preferences, ssh keys etc.
+By default, {prod-short} operator will create and manage a database deployment. 
+However, {prod-short} operator does not support full lifecycle capabilities like backups and recovery. For business-critical setup, it is recommended to configure an external database with the following disaster recovery options:
 
 - High Availability (HA)
 - Point In Time Recovery (PITR)
 
-External link:https://www.postgresql.org/[PostgreSQL] instance can be easily set up via service like link:https://aws.amazon.com/rds/[RDS], 
+External link:https://www.postgresql.org/[PostgreSQL] instance can be set up on-premises or via cloud services like link:https://aws.amazon.com/rds/[RDS], 
 which allows deploying production databases in a Multi-Availability Zone configuration for a resilient disaster recovery strategy with both daily and on-demand snapshots.
 The recommended configuration, in this case, is the following:
 
@@ -34,4 +34,4 @@ TLS: Enabled
 Automated backups: Enabled (30 Days)
 ```
 
-An external database is configured via the `externalDb: true` property in the {prod-id-short} Custom Resource (the operator skips deploying Postgres, and passes connection details of existing DB to {prod-id-short} server using `chePostgresHostName`, `chePostgresPort`, `chePostgresUser`, `chePostgresPassword`, `chePostgresDb` parameters).
+An external database is configured via the `externalDb: true` property in the {prod-short} Custom Resource (in this case the operator skips deploying a database, and passes connection details of existing DB to {prod-short} server using `chePostgresHostName`, `chePostgresPort`, `chePostgresUser`, `chePostgresPassword`, `chePostgresDb` parameters).
