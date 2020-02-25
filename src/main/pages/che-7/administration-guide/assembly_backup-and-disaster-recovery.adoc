@@ -10,7 +10,7 @@ summary:
 
 :parent-context-of-backup-and-disaster-recovery: {context}
 
-[id='backup-and-disaster-recovery']
+[id="backup-and-disaster-recovery_{context}"]
 = Backup and Disaster Recovery
 
 :context: backup-and-disaster-recovery
@@ -21,4 +21,4 @@ This section describes the aspects of the {prod-short} backup and disaster recov
 
 * link:{site-baseurl}che-7/persistent-volumes-backups[Persistent Volumes backups]
 
-:context: {parent-context-of-securing-che}
+:context: {parent-context-of-backup-and-disaster-recovery}
